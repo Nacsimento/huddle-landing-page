@@ -1,0 +1,71 @@
+
+.bg{
+         background-image: url("https:/huddle-landing-page/images/bg-hero-mobile.svg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+    @include breakpoint-up(large){
+        background-image: url("https:/huddle-landing-page/images/bg-hero-desktop.svg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+        background-color: hsl(193, 100%, 96%);
+    }
+}
+
+.header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+
+    @include breakpoint-up(large){
+        padding-top: 47px;
+        padding-left: 80px;
+        padding-right: 80px;
+
+    }
+    &__logo{
+        
+            img{
+                width: 50%;
+
+                @include breakpoint-up(large){
+                    
+                    width: 200px;
+                    height: 30px;
+                }
+            }
+        
+    }
+   
+
+    &__button{
+        
+        padding: 8px 18px;
+        background-color: white;
+        border-radius: 20px;
+        border:none;
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 700;
+        box-shadow: 0px 3px 12px rgba(0,0,0,0.15);
+        transition: opacity 150ms ease-in-out;
+
+        &:hover{
+            opacity: 0.7;
+        }
+
+        @include breakpoint-up(large){
+            padding: 14px 62px;
+            border-radius: 30px;
+        }
+        a{
+            text-decoration: none;
+            color:black
+        }
+
+      
+
+    }
+}
